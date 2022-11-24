@@ -14,6 +14,29 @@ See [here](https://github.com/apigee/apigee-devportal-kickstart-drupal) for the 
 - Apigee Organization
 - `docker` and `docker-compose` installed
 
+## Apigee environment Variables
+Create file `apigee.env` where you have `Dockerfile` and `docker-compose.yml` containing below and replace the values according to your setup.
+
+```
+#Apigee Edge connection configuration
+APIGEE_EDGE_INSTANCE_TYPE=public
+APIGEE_EDGE_AUTH_TYPE=oauth
+APIGEE_EDGE_ORGANIZATION=orgName
+APIGEE_EDGE_USERNAME=UserName
+APIGEE_EDGE_PASSWORD=Password
+APIGEE_EDGE_ENDPOINT=https://api.enterprise.apigee.com/v1
+#APIGEE_EDGE_AUTHORIZATION_SERVER=
+#APIGEE_EDGE_CLIENT_ID=edgecli
+#APIGEE_EDGE_CLIENT_SECRET=edgesecret
+#APIGEE_EDGE_ACCOUNT_JSON_KEY=
+
+#Drupal Admin settings
+ADMIN_EMAIL=admin@example.com
+ADMIN_USER=admin
+ADMIN_PASS=pass
+
+```
+
 ## Features
 - Apigee Kickstart profile installed
 - Drupal REST UI installed
