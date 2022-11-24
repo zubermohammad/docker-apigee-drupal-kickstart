@@ -8,6 +8,6 @@ code/web/profiles/contrib
 code/web/themes/contrib
 private-files
 public-files
-# apigee.env
+apigee.env
 .composer
 dist
