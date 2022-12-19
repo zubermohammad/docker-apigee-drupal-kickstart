@@ -15,13 +15,23 @@
 
 set -ex
 
-DRUSH='php -d memory_limit=-1 /usr/bin/drush'
-composer require drupal/restui -o --working-dir=/app/code --no-interaction
+ln -sf /app/code/vendor/bin/drush /usr/bin/drush
 
+# npm install 
+
+DRUSH='php -d memory_limit=-1 /usr/bin/drush'
+mkdir -p /app/code/web/sites/default/files \
+      && mkdir -p /app/code/web/sites/default/private \
+      && mkdir -p /app/tmp \
+      && mkdir -p /app/config \
+      && mkdir -p /app/dist
+# /set-permissions.sh --drupal_path=/app/code/web --drupal_user=www-data --httpd_group=www-data
 FILE="/app/code/web/sites/default/private/salt.txt"
 
 if [ ! -f "$FILE" ]; then
   if [ "$AUTO_INSTALL_PORTAL" == "true" ]; then
+    
+    composer require drupal/restui -o --working-dir=/app/code --no-interaction
     $DRUSH si apigee_devportal_kickstart --site-name="Apigee Developer Portal" \
       --account-name="$ADMIN_USER" --account-mail="$ADMIN_EMAIL" \
       --account-pass="$ADMIN_PASS" --site-mail="noreply@apigee.com" \
@@ -30,12 +40,17 @@ if [ ! -f "$FILE" ]; then
     $DRUSH config:set key.key.apigee_edge_connection_default key_provider apigee_edge_environment_variables --no-interaction
     $DRUSH cim --partial --source=/app/default-config
     $DRUSH apigee-edge:sync --no-interaction
-    /set-permissions.sh --drupal_path=/app/code/web --drupal_user=www-data --httpd_group=www-data
+    # /set-permissions.sh --drupal_path=/app/code/web --drupal_user=www-data --httpd_group=www-data
+    # chown -R www-data:www-data /app/code/vendor
   fi
 else
+  
+  # composer install
+  
   $DRUSH updb -y || true
 fi
-
+/set-permissions.sh --drupal_path=/app/code/web --drupal_user=www-data --httpd_group=www-data
+chown -R www-data:www-data /app/code/vendor
 $DRUSH cr || true
 
 supervisord --nodaemon -c /etc/supervisor/conf.d/drupal-supervisor.conf

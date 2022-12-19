@@ -26,9 +26,9 @@
     }
   ],
   "require": {
-    "php": "^7.4 || ^8.0",
+    "php": "^8.0",
     "apigee/apigee_devportal_kickstart": "^2",
-    "composer/installers": "^1.9",
+    "composer/installers": "^1.9 || ^2",
     "drupal/apigee_m10n": "^2",
     "drupal/commerce": "^2.21",
     "drupal/core-composer-scaffold": "^9",
@@ -43,7 +43,8 @@
   "require-dev": {
     "apigee/apigee-mock-client-php": "^1.1",
     "drupal/core-dev": "^9",
-    "drush/drush": "^11"
+    "drush/drush": "^11",
+    "squizlabs/php_codesniffer": "*"
   },
   "conflict": {
     "drupal/drupal": "*",
@@ -111,6 +112,13 @@
     "quick-start": [
       "composer install",
       "php web/core/scripts/drupal quick-start apigee_devportal_kickstart"
+    ],
+    "verify":[
+      "vendor/bin/phpcs web/modules/custom",
+      "node_modules/.bin/eslint web/modules/custom",
+      "vendor/bin/phpunit web/modules/custom"
     ]
   }
 }
+
+

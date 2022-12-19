@@ -1,11 +1,3 @@
 code/.empty
-code/vendor
-code/web/core
-code/web/modules/contrib
-code/web/profiles/contrib
-code/web/themes/contrib
+code/node_modules
 apigee.env
-.composer
-private-files
-public-files
-dist

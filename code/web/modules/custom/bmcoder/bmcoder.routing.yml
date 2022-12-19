@@ -1,0 +1,7 @@
+bmcoder.form:
+  path: '/example-form'
+  defaults:
+    _title: 'Example form'
+    _form: '\Drupal\bmcoder\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'

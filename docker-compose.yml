@@ -37,11 +37,11 @@ services:
       apigee-kickstart-database:
         condition: service_healthy
     volumes:
-    - ./public-files:/app/code/web/sites/default/files
-    - ./private-files:/app/code/web/sites/default/private
+    - drupal-public-files:/app/code/web/sites/default/files
+    - drupal-private-files:/app/code/web/sites/default/private
     - ./.composer:/root/.composer
-    - ./dist:/app/dist
-    # - ./code:/app/code
+    # - ./dist:/app/dist
+    - ./code:/app/code
   apigee-kickstart-database:
     image: mariadb:10.6
     volumes:
