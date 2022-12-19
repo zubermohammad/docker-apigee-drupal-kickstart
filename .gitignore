@@ -6,3 +6,4 @@ apigee.env
 stderr
 stdout
 *.pid
+node_modules
