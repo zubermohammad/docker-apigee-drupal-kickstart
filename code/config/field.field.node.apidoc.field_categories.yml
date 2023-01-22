@@ -1,0 +1,31 @@
+uuid: 68e207ac-6d3d-4a0d-b837-e2f86f6308e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categories
+    - node.type.apidoc
+    - taxonomy.vocabulary.api_category
+_core:
+  default_config_hash: Zm4m6kptyolJtQ8okz7t_z8P76I_2kKjw6IwLTJslio
+id: node.apidoc.field_categories
+field_name: field_categories
+entity_type: node
+bundle: apidoc
+label: Categories
+description: 'The OpenAPI Docs categories.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      api_category: api_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

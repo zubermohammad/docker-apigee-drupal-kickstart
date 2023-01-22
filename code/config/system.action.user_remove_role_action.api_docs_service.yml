@@ -1,0 +1,14 @@
+uuid: a3208875-cd0a-42e5-87e0-9650d2b53235
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.api_docs_service
+  module:
+    - user
+id: user_remove_role_action.api_docs_service
+label: 'Remove the API Docs Service role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: api_docs_service

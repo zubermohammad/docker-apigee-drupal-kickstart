@@ -1,0 +1,19 @@
+uuid: cd6f9509-81a0-48bd-9fba-b9545db06b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_unit
+    - node.type.apidoc
+id: node.apidoc.field_business_unit
+field_name: field_business_unit
+entity_type: node
+bundle: apidoc
+label: 'Business unit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

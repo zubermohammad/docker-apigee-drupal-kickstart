@@ -1,0 +1,14 @@
+uuid: 1b2fa573-87e2-4e2b-b08a-47ca0554cb4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.api_docs_service
+  module:
+    - user
+id: user_add_role_action.api_docs_service
+label: 'Add the API Docs Service role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: api_docs_service

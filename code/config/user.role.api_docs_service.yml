@@ -1,0 +1,45 @@
+uuid: a41845b1-3fa9-4aaf-92f7-f49b0bd605fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+    - media.type.image
+    - node.type.apidoc
+    - taxonomy.vocabulary.api_category
+    - taxonomy.vocabulary.stc_tenant
+  module:
+    - media
+    - node
+    - taxonomy
+id: api_docs_service
+label: 'API Docs Service'
+weight: 3
+is_admin: null
+permissions:
+  - 'administer content types'
+  - 'administer nodes'
+  - 'create apidoc content'
+  - 'create file media'
+  - 'create image media'
+  - 'create terms in api_category'
+  - 'create terms in stc_tenant'
+  - 'delete any apidoc content'
+  - 'delete any file media'
+  - 'delete any image media'
+  - 'delete apidoc revisions'
+  - 'delete own apidoc content'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete terms in api_category'
+  - 'delete terms in stc_tenant'
+  - 'edit any apidoc content'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit own apidoc content'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit terms in api_category'
+  - 'edit terms in stc_tenant'
+  - 'revert apidoc revisions'
+  - 'view apidoc revisions'

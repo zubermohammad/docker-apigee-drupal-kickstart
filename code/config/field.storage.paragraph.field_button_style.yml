@@ -1,0 +1,29 @@
+uuid: f3eaf686-1ca4-4e01-97ac-01bb379f9ada
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: MkneUmdI9Pcgz6CIdJNDcHHfqAaKiQnA65oxRx3wB8A
+id: paragraph.field_button_style
+field_name: field_button_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: Primary
+    -
+      value: secondary
+      label: Secondary
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

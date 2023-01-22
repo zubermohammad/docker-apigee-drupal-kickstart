@@ -1,0 +1,28 @@
+uuid: bce28459-84f3-4b31-a4a6-69325171f840
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_apidoc_file_link
+    - node.type.apidoc
+  module:
+    - file_link
+_core:
+  default_config_hash: wr4-Vqfw31QNWdQj65ijjF9BWpEIPS7K4g_uhfBtOrc
+id: node.apidoc.field_apidoc_file_link
+field_name: field_apidoc_file_link
+entity_type: node
+bundle: apidoc
+label: 'URL to OpenAPI specification file'
+description: 'The URL to an OpenAPI file spec.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+  file_extensions: 'yaml json'
+  no_extension: false
+  deferred_request: false
+field_type: file_link

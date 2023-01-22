@@ -37,3 +37,7 @@ if (!file_exists($salt_file)) {
     file_put_contents($salt_file, \Drupal\Component\Utility\Crypt::randomBytesBase64(55));
 }
 $settings['hash_salt'] = file_get_contents($salt_file);
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = [
+  $_SERVER['REMOTE_ADDR'],
+];

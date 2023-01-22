@@ -1,0 +1,16 @@
+uuid: 19883ea1-7ea9-4301-a09c-c1447b3bd9e4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - apigee_api_catalog
+_core:
+  default_config_hash: XCwo5CRMKhYf_Q0IHFvTQ4ijViTHXbF6bnu9ZSN49qI
+name: 'OpenAPI Doc'
+type: apidoc
+description: 'Use <em>OpenAPI Docs</em> to document APIs'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

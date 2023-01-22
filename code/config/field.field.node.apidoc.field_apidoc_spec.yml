@@ -1,0 +1,29 @@
+uuid: 595e6c8c-0e28-48fb-860c-2f2de71e09bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_apidoc_spec
+    - node.type.apidoc
+  module:
+    - file
+_core:
+  default_config_hash: LkrXKnOQqFf_tAHvOAH9NnVA-1DZGfaHZWQH82BYdjo
+id: node.apidoc.field_apidoc_spec
+field_name: field_apidoc_spec
+entity_type: node
+bundle: apidoc
+label: 'OpenAPI specification'
+description: 'The spec snapshot.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: apidoc_specs
+  file_extensions: 'yaml json'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
