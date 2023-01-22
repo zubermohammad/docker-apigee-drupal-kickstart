@@ -1,0 +1,21 @@
+uuid: 42896d63-cdf2-4364-8c2e-307537f9881e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_backend_targets
+field_name: field_backend_targets
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 50
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

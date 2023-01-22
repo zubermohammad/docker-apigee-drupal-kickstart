@@ -1,0 +1,29 @@
+uuid: 031a7868-3056-477c-b0da-cbb500ba405b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tenant_name
+    - node.type.apidoc
+    - taxonomy.vocabulary.stc_tenant
+id: node.apidoc.field_tenant_name
+field_name: field_tenant_name
+entity_type: node
+bundle: apidoc
+label: 'Tenant Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      stc_tenant: stc_tenant
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
